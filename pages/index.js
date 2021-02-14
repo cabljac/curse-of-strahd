@@ -23,7 +23,7 @@ export default function Home() {
               <span className="heading-primary-second">Strahd</span>
               <span class="heading-primary-third">campaign homepage</span>
             </h1>
-            <Link href="#">
+            <Link href="/login">
               <a className="btn btn-purple btn-animated">Sign In</a>
             </Link>
           </div>
