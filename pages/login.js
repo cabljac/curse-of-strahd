@@ -16,7 +16,7 @@ const Login = () => {
         ></meta>
       </Head>
       <body>
-        <header></header>
+        <header class="header-animated"></header>
       </body>
     </>
   );
