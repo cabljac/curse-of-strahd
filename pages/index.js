@@ -1,11 +1,11 @@
 import Head from "next/head";
 import Link from "next/link";
+
 export default function Home() {
   return (
-    <div>
+    <>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Curse of Strahd</title>
         <link
           href="https://fonts.googleapis.com/css?family=Spectral:100,300,400,700,900"
           rel="stylesheet"
@@ -15,35 +15,37 @@ export default function Home() {
           content="width=device-width, initial-scale=1"
         ></meta>
       </Head>
-      <body>
+      <div>
         <header className="header" style={{}}>
           <div className="text-box">
             <h1 className="heading-primary">
               <span className="heading-primary-first">Curse of</span>
               <span className="heading-primary-second">Strahd</span>
-              <span class="heading-primary-third">campaign homepage</span>
+              <span className="heading-primary-third">campaign homepage</span>
             </h1>
             <Link href="/login">
-              <a className="btn btn-purple btn-animated">Sign In</a>
+              <a href="/login" className="btn btn-purple btn-animated">
+                Sign In
+              </a>
             </Link>
           </div>
-          <div class="cloud-container">
-            <div class="cloud-left" id="cloud-back"></div>
-            <div class="cloud-left" id="cloud-mid"></div>
-            <div class="cloud-left" id="cloud-front"></div>
+          <div className="cloud-container">
+            <div className="cloud-left" id="cloud-back"></div>
+            <div className="cloud-left" id="cloud-mid"></div>
+            <div className="cloud-left" id="cloud-front"></div>
           </div>
-          <div class="cloud-container">
-            <div class="cloud-right" id="cloud-back"></div>
-            <div class="cloud-right" id="cloud-mid"></div>
-            <div class="cloud-right" id="cloud-front"></div>
+          <div className="cloud-container">
+            <div className="cloud-right" id="cloud-back"></div>
+            <div className="cloud-right" id="cloud-mid"></div>
+            <div className="cloud-right" id="cloud-front"></div>
           </div>
-          <div class="cloud-container">
-            <div class="cloud-third" id="cloud-back"></div>
-            <div class="cloud-third" id="cloud-mid"></div>
-            <div class="cloud-third" id="cloud-front"></div>
+          <div className="cloud-container">
+            <div className="cloud-third" id="cloud-back"></div>
+            <div className="cloud-third" id="cloud-mid"></div>
+            <div className="cloud-third" id="cloud-front"></div>
           </div>
         </header>
-      </body>
+      </div>
       <svg width="0" height="0">
         <filter id="filter-back">
           <feTurbulence
@@ -73,6 +75,6 @@ export default function Home() {
           <feDisplacementMap in="SourceGraphic" scale="100" />
         </filter>
       </svg>
-    </div>
+    </>
   );
 }
