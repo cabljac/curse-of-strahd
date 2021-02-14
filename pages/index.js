@@ -23,26 +23,24 @@ export default function Home() {
               <span className="heading-primary-second">Strahd</span>
               <span className="heading-primary-third">campaign homepage</span>
             </h1>
-            <Link href="/login">
-              <a href="/login" className="btn btn-purple btn-animated">
-                Sign In
-              </a>
+            <Link href="http://localhost:3000/login">
+              <span className="btn btn-purple btn-animated">Sign In</span>
             </Link>
           </div>
           <div className="cloud-container">
-            <div className="cloud-left" id="cloud-back"></div>
-            <div className="cloud-left" id="cloud-mid"></div>
-            <div className="cloud-left" id="cloud-front"></div>
+            <div className="cloud-left cloud-back"></div>
+            <div className="cloud-left cloud-mid"></div>
+            <div className="cloud-left cloud-front"></div>
           </div>
           <div className="cloud-container">
-            <div className="cloud-right" id="cloud-back"></div>
-            <div className="cloud-right" id="cloud-mid"></div>
-            <div className="cloud-right" id="cloud-front"></div>
+            <div className="cloud-right cloud-back"></div>
+            <div className="cloud-right cloud-mid"></div>
+            <div className="cloud-right cloud-front"></div>
           </div>
           <div className="cloud-container">
-            <div className="cloud-third" id="cloud-back"></div>
-            <div className="cloud-third" id="cloud-mid"></div>
-            <div className="cloud-third" id="cloud-front"></div>
+            <div className="cloud-third cloud-back"></div>
+            <div className="cloud-third cloud-mid"></div>
+            <div className="cloud-third cloud-front"></div>
           </div>
         </header>
       </div>
