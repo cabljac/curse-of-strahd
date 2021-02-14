@@ -1,65 +1,78 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-
+import Head from "next/head";
+import Link from "next/link";
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
+        <link
+          href="https://fonts.googleapis.com/css?family=Spectral:100,300,400,700,900"
+          rel="stylesheet"
+        />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1"
+        ></meta>
       </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+      <body>
+        <header className="header" style={{}}>
+          <div className="text-box">
+            <h1 className="heading-primary">
+              <span className="heading-primary-first">Curse of</span>
+              <span className="heading-primary-second">Strahd</span>
+              <span class="heading-primary-third">campaign homepage</span>
+            </h1>
+            <Link href="#">
+              <a className="btn btn-purple btn-animated">Sign In</a>
+            </Link>
+          </div>
+          <div class="cloud-container">
+            <div class="cloud-left" id="cloud-back"></div>
+            <div class="cloud-left" id="cloud-mid"></div>
+            <div class="cloud-left" id="cloud-front"></div>
+          </div>
+          <div class="cloud-container">
+            <div class="cloud-right" id="cloud-back"></div>
+            <div class="cloud-right" id="cloud-mid"></div>
+            <div class="cloud-right" id="cloud-front"></div>
+          </div>
+          <div class="cloud-container">
+            <div class="cloud-third" id="cloud-back"></div>
+            <div class="cloud-third" id="cloud-mid"></div>
+            <div class="cloud-third" id="cloud-front"></div>
+          </div>
+        </header>
+      </body>
+      <svg width="0" height="0">
+        <filter id="filter-back">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0.012"
+            numOctaves="4"
+            seed="7"
+          />
+          <feDisplacementMap in="SourceGraphic" scale="170" />
+        </filter>
+        <filter id="filter-mid">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0.012"
+            numOctaves="2"
+            seed="6"
+          />
+          <feDisplacementMap in="SourceGraphic" scale="150" />
+        </filter>
+        <filter id="filter-front">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0.012"
+            numOctaves="2"
+            seed="0"
+          />
+          <feDisplacementMap in="SourceGraphic" scale="100" />
+        </filter>
+      </svg>
     </div>
-  )
+  );
 }

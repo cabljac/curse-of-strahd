@@ -1,9 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.7;
+  font-family: Spectral;
+  font-weight: 100;
+  background-color: rgb(18, 4, 22);
 }
 
 a {
@@ -11,6 +21,237 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+@media (min-width: 670px) {
+  header {
+    height: 95vh;
+    background-image: linear-gradient(
+        to bottom right,
+        rgba(46, 37, 63, 0.481),
+        rgba(64, 34, 79, 0.693)
+      ),
+      url(../public/assets/hero.jpg);
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
+  }
+}
+
+@media (max-width: 670px) {
+  header {
+    height: 95vh;
+    background-image: linear-gradient(
+        to bottom right,
+        rgba(46, 37, 63, 0.481),
+        rgba(64, 34, 79, 0.693)
+      ),
+      url(../public/assets/hero.jpg);
+    background-size: cover;
+  }
+}
+
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.heading-primary {
+  color: #fff;
+  backface-visibility: hidden;
+  text-align: center;
+  backface-visibility: hidden;
+}
+
+.heading-primary-first {
+  display: block;
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: 1vw;
+  animation-duration: 2.5s;
+  animation-delay: 2s;
+  margin-bottom: 10px;
+  animation-name: fadeIn;
+  animation-fill-mode: backwards;
+}
+
+.heading-primary-second {
+  display: block;
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: 1vw;
+  animation-duration: 2.5s;
+  animation-delay: 2s;
+  margin-bottom: 10px;
+  animation-name: fadeIn;
+  animation-fill-mode: backwards;
+}
+
+.heading-primary-third {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.5vw;
+  animation-name: fadeIn;
+  animation-duration: 2.5s;
+  animation-delay: 3s;
+  margin-bottom: 20px;
+  animation-fill-mode: backwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.cloud-container {
+  position: relative;
+}
+
+.cloud-left {
+  opacity: 0;
+  width: 800px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  top: 20vh;
+  left: 0;
+  transform: translateX(-20%);
+  animation-name: moveInLeft;
+  animation-duration: 10s;
+}
+
+.cloud-right {
+  opacity: 0;
+  width: 800px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  top: 40vh;
+  left: 0;
+  transform: translateX(-30%);
+  animation-name: moveInRight;
+  animation-duration: 8s;
+}
+
+.cloud-third {
+  opacity: 0;
+  width: 800px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  top: 200px;
+  left: 0;
+  transform: translateX(-50%);
+  animation-name: moveInThird;
+  animation-duration: 5s;
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-300px);
+  }
+}
+
+@keyframes moveInThird {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-600px);
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(300px);
+  }
+}
+
+#cloud-back {
+  filter: url(#filter-back);
+  box-shadow: 300px 300px 30px -20px rgba(245, 240, 240, 0.528);
+}
+
+#cloud-mid {
+  filter: url(#filter-mid);
+  box-shadow: 300px 340px 70px -60px rgba(71, 74, 77, 0.919);
+}
+
+#cloud-front {
+  filter: url(#filter-front);
+  box-shadow: 300px 370px 60px -100px rgb(0, 0, 0);
+}
+
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  padding: 2px 10px;
+  display: inline-block;
+  border-radius: 15%;
+  transition: all 0.1s;
+  margin-top: 20%;
+}
+
+.btn-purple {
+  background-color: transparent;
+  color: white;
+  border: #fff;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-animated {
+  animation: moveInBottom 1.5s ease-out 6s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  30% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
